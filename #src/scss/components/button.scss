@@ -1,0 +1,116 @@
+//*------------------------------ < Button > -----------------------------------
+button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: inherit;
+	border-radius: 2px;
+	background-color: transparent;
+	// overflow: hidden;
+}
+
+// -----------------------------------------------------------------------------
+.cart-buttom {
+	display: flex;
+	// .cart-buttom__buttom
+	&__buttom {
+		font: {
+			size: 1.4rem;
+			weight: 900;
+		}
+		white-space: nowrap;
+		text-transform: uppercase;
+		color: #999;
+
+		span {
+			height: 3.4rem;
+			@include flex-align-center;
+			margin-right: 10px;
+			padding: 0 5.8rem 0 1.5rem;
+			background: #f3f3f3;
+		}
+
+		&:hover {
+			span {
+				transition: all 0.5s ease-in-out;
+				color: #fff;
+				background-color: $orange;
+			}
+		}
+
+		.icon-cart-circle {
+			position: absolute;
+			right: 0;
+
+			&::before {
+				font-size: 5.2rem;
+				color: #f68038;
+				border-radius: 50%;
+				background: #fff;
+			}
+		}
+	}
+}
+
+//* ------------------- [Effect of pressing the button] ------------------------
+._btn {
+	font-size: 14px;
+	font-weight: 400;
+	width: 96px;
+	height: 35px;
+	transition: transform 0.15s;
+	border-radius: 2px;
+	transform-style: preserve-3d;
+}
+
+._press {
+	font-family: inherit;
+	font-size: inherit;
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: middle;
+	text-decoration: none;
+	border: 0;
+	outline: none;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		content: '';
+		transition: transform 0.15s,
+		box-shadow 0.15s;
+		transform: translate3d(0, 0.15em, -1em);
+		border-radius: inherit;
+		background-color: #06829269;
+		box-shadow: 0 0 0 0 #dadada,
+		0 0.05em 0 0 #ffe3e2;
+	}
+
+	&:hover {
+		transform: translate(0, 0.05em);
+		background: $orange;
+	}
+
+	&:hover::before {
+		transform: translate3d(0, 0.05em, -1em);
+		box-shadow: 0 0 0 2px #dadada,
+		0 0.05em 0 0 #ffe3e2;
+	}
+
+	&:active {
+		transform: translate(0em, 0.15em);
+		background: $orange;
+	}
+
+	&:active::before {
+		transform: translate3d(0, 0, -1em);
+		box-shadow: 0 0 0 1px #dadada,
+		0 0 #ffe3e2;
+	}
+}

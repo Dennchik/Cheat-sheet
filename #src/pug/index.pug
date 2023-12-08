@@ -1,0 +1,9 @@
+extends ./layout/app
+block page 
+	div(class="wrapper")
+		include ./includes/mixins
+		include ./chunk/header
+		.page
+			._container
+				main.main-content._container
+		include chunk/footer

@@ -1,0 +1,307 @@
+//*  ------------------- [Подключение (Accordions-Collapse)] -------------------
+.menu-page > ._collapse:not(._show),
+.search-page > ._collapse:not(._show),
+.section-filter > ._collapse:not(._show) {
+	display: none;
+}
+
+.order-catalog__select:not(.itc-select_show) > .itc-select__dropdown,
+.show-catalog__select:not(.itc-select_show) > .itc-select__dropdown {
+	display: none;
+}
+
+@include _920 {
+	.menu-page__parent > ._collapse:not(._show),
+	.filter__column > ._collapse:not(._show) {
+		display: none;
+	}
+}
+
+//*  ------------------------ [Breadcrumbs] ------------------------------------
+.breadcrumbs {
+	margin: 10px 0 20px;
+	scrollbar-width: none;
+	@include _920 {
+		margin-bottom: 10px;
+	}
+}
+
+//*  --------------------------- [Arrow] ---------------------------------------
+._arrow {
+	width: 33px;
+	max-width: 100%;
+	height: 29px;
+	cursor: pointer;
+	outline: none;
+	background: url('data:image/svg+xml,%3C%3Fxml version=\'1.0\' encoding=\'utf-8\'%3F%3E%3Csvg version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\' x=\'0px\' y=\'0px\' viewBox=\'0 0 29 25\' style=\'enable-background:new 0 0 29 25;\' xml:space=\'preserve\'%3E%3Cg%3E%3Cpath fill=\'%23f68038\' d=\'M17.8,21.9c-0.5,1.6-1.9,2.3-3.4,1.7c-0.6-0.2-1.1-0.6-1.6-0.9c-3.3-2.5-6.6-5-10-7.5c-2.1-1.6-2.3-2.7-0.7-4.8%0AC2.5,9.8,3.1,9.4,3.6,9C5.7,7.3,7.9,5.7,10,4.1c1.3-1,2.6-2,4-2.7c2-1,3.7-0.1,4,2c0.2,1.5,0.9,1.8,2.2,1.8c1.8,0,3.7,0.1,5.5,0.3c2,0.2,2.6,1.4,2.4,3.4c-0.2,2.3-0.2,4.7,0.1,7c0.2,1.9-0.4,3.5-2.4,3.6c-2.4,0.2-4.9,0-7.4,0C18.3,20.3,18.1,21.1,17.8,21.9zM13.6,4.5c-3.1,2.3-6.1,4.6-9.2,6.9c-1.1,0.8-1.1,1.2,0,2.1c2.9,2.2,5.8,4.4,8.7,6.6c0.2,0.2,0.4,0.4,0.7,0.5c0.5,0.2,1,0.4,1.5,0.6c0.1-0.6,0.3-1.2,0.3-1.7c0-0.3-0.1-0.6-0.1-0.9c-0.2-1.1,0.3-1.7,1.4-1.7c2.5,0,5.1-0.1,7.6,0.1c1.2,0.1,1.5-0.3,1.5-1.4c0-2.2,0-4.3,0-6.5c0-0.9-0.3-1.2-1.2-1.2c-2.5,0.1-5.1,0-7.6,0c-1.3,0-1.7-0.5-1.7-1.7c0-1,0.1-2,0.2-3.3C14.9,3.5,14.2,4,13.6,4.5z\'/%3E%3C/g%3E%3C/svg%3E') center / contain no-repeat;
+	@include _690 {
+		width: 23px;
+	}
+	@include _min-920 {
+		&:hover {
+			background: url('data:image/svg+xml,%3C%3Fxml version=\'1.0\' encoding=\'utf-8\'%3F%3E%3Csvg version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\' x=\'0px\' y=\'0px\' viewBox=\'0 0 29 25\' style=\'enable-background:new 0 0 29 25;\' xml:space=\'preserve\'%3E%3Cg%3E%3Cpath fill=\'%23068292\' d=\'M17.8,21.9c-0.5,1.6-1.9,2.3-3.4,1.7c-0.6-0.2-1.1-0.6-1.6-0.9c-3.3-2.5-6.6-5-10-7.5c-2.1-1.6-2.3-2.7-0.7-4.8%0AC2.5,9.8,3.1,9.4,3.6,9C5.7,7.3,7.9,5.7,10,4.1c1.3-1,2.6-2,4-2.7c2-1,3.7-0.1,4,2c0.2,1.5,0.9,1.8,2.2,1.8c1.8,0,3.7,0.1,5.5,0.3c2,0.2,2.6,1.4,2.4,3.4c-0.2,2.3-0.2,4.7,0.1,7c0.2,1.9-0.4,3.5-2.4,3.6c-2.4,0.2-4.9,0-7.4,0C18.3,20.3,18.1,21.1,17.8,21.9zM13.6,4.5c-3.1,2.3-6.1,4.6-9.2,6.9c-1.1,0.8-1.1,1.2,0,2.1c2.9,2.2,5.8,4.4,8.7,6.6c0.2,0.2,0.4,0.4,0.7,0.5c0.5,0.2,1,0.4,1.5,0.6c0.1-0.6,0.3-1.2,0.3-1.7c0-0.3-0.1-0.6-0.1-0.9c-0.2-1.1,0.3-1.7,1.4-1.7c2.5,0,5.1-0.1,7.6,0.1c1.2,0.1,1.5-0.3,1.5-1.4c0-2.2,0-4.3,0-6.5c0-0.9-0.3-1.2-1.2-1.2c-2.5,0.1-5.1,0-7.6,0c-1.3,0-1.7-0.5-1.7-1.7c0-1,0.1-2,0.2-3.3C14.9,3.5,14.2,4,13.6,4.5z\'/%3E%3C/g%3E%3C/svg%3E') center / contain no-repeat;
+		}
+	}
+}
+
+.quantity-remove {
+	&._disabled {
+		opacity: 0.5;
+	}
+}
+
+._arrow_next {
+	transform: rotate(-180deg);
+
+	@include _min-920 {
+		&:hover {
+			transform: rotate(-180deg);
+		}
+	}
+}
+
+//* ----------------------------------------------------------------------------
+.card-name {
+	display: flex;
+	flex-direction: column;
+
+	// .card-name__title
+	&__title {
+		font-size: 1.6rem;
+		font-weight: 300;
+		line-height: 2.4rem;
+		flex: 1 1 auto;
+		margin-bottom: 1.5rem;
+		color: #36949f;
+
+		span:nth-child(1) {
+			font-weight: 900;
+			line-height: 2.2rem;
+			display: block;
+		}
+	}
+
+	// .card-name__price
+	&__price {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .card-name__old-price
+	&__old-price {
+		font: {
+			size: 1.8rem;
+			weight: 400;
+		}
+		text-align: right;
+		text-decoration: line-through;
+		color: #999;
+
+		i {
+			font-size: 1.4rem;
+		}
+	}
+
+	// .card-name__new-price
+	&__new-price {
+		@include flex-align-center-justify-space-between;
+		font: {
+			size: 2.4rem;
+			weight: 900;
+		}
+
+		flex-direction: row;
+
+		color: #333;
+
+		a {
+			&.icon-cart-circle {
+				white-space: nowrap;
+
+				&::before {
+					font-size: 4.3rem;
+					transition: 0.4s linear;
+					color: $textColor;
+				}
+
+				&:hover {
+					&:before {
+						color: $orange;
+					}
+				}
+			}
+		}
+
+		i {
+			font-size: 1.8rem;
+		}
+	}
+
+	// .card-name__basket-white
+	&__basket-white {
+		&.icon-cart-circle {
+			&::before {
+				font-size: 4.3rem;
+				transition: 0.4s linear;
+				color: $textColor;
+			}
+
+			&:hover {
+				&:before {
+					color: $orange;
+				}
+			}
+		}
+	}
+}
+
+//* ----------------------------------------------------------------------------
+
+.quantity {
+	@include flex-align-center-justify-space-between;
+	// .quantity__buttom
+	&__buttom {
+		width: 20px;
+		height: 17px;
+	}
+
+	// .quantity__input
+	&__input {
+		input {
+			font-size: 1.6rem;
+			width: 5.6rem;
+			height: 3.3rem;
+			margin: 0 1rem;
+			text-align: center;
+			color: #999;
+		}
+	}
+}
+
+//*  ------------------------ [Greed Card a] -----------------------------------
+._card {
+	img {
+		width: 100%;
+		vertical-align: middle;
+		object-fit: cover;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+
+		&:before {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			content: '';
+		}
+	}
+}
+
+//* ------------------------ [Greed Card] --------------------------------------
+._greed-card {
+	position: relative;
+	display: grid;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		vertical-align: middle;
+		object-fit: cover;
+	}
+
+	> * {
+		grid-area: 1/-1;
+	}
+}
+
+//* ------------------------- [Class _ibg] -------------------------------------
+._ibg {
+	position: relative;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+//* -------------------------- [Class _img] ------------------------------------
+[class*=' _img'] {
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		width: 100%;
+		min-width: 100%;
+		height: 100%;
+		height: 100%;
+		vertical-align: middle;
+		object-fit: cover;
+	}
+}
+
+//* ------------------ [Clip-Path inset() modifcator] --------------------------
+._clip-inset {
+	@include _min-920 {
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			content: '';
+			transition: 0.2s linear;
+			color: #fff;
+			clip-path: inset(
+							var(--inset-top) var(--inset-right) var(--inset-bottom) var(--inset-left)
+			);
+		}
+
+		&:hover {
+			&:before {
+				--size: 135px;
+				--inset-top: 0;
+				--inset-right: 0;
+				--inset-bottom: 0;
+				--inset-left: 0;
+				clip-path: inset(
+								var(--inset-top) var(--inset-right) var(--inset-bottom) var(--inset-left)
+				);
+			}
+		}
+	}
+}
+
+//* --------------------- [Clip-Path circle() modifcator] ----------------------
+._clip-circle {
+	@include _min-920 {
+		position: relative;
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			content: '';
+			transition: 0.2s linear;
+			color: #fff;
+			clip-path: circle(var(--size) at var(--pos));
+		}
+
+		&:hover {
+			&:before {
+				--size: 135px;
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+.settings/
+/.idea
+.idea
+/.vscode
+.vscode
+node_modules
+Applications
+Temp
+Templates
+Build

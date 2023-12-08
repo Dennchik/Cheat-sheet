@@ -1,0 +1,60 @@
+// todo --------------------------- Mixins ------------------------------------
+@import 'core/mixins';
+// todo -------------------------- Variables -----------------------------------
+@import 'core/variables';
+@import 'core/variables-icon';
+//todo ------------------------- Default fonts ---------------------------------
+// &display=swap&subset=cyrillic-ext
+// todo --------------------------- Fonts --------------------------------------
+@import 'core/fonts';
+//todo  ------------------------ Icon Fonts ------------------------------------
+@import 'core/iconfonts';
+// todo ------------------------ Reset code ------------------------------------
+@import 'core/reset';
+// todo ---------------------------- Ui ----------------------------------------
+@import 'core/ui';
+// todo -------------------------- Plugins -------------------------------------
+// @import 'components/swiper';
+// todo -------------------------- Classes -------------------------------------
+// #region
+.wrapper {
+	position: relative;
+	display: flex;
+	flex: 1 1 100%;
+	flex-direction: column;
+	max-width: $maxWidth;
+	min-height: 100vh;
+	margin: 0 auto;
+}
+
+[class*='_container'] {
+	/* border: groove; */
+	box-sizing: content-box;
+	max-width: $maxWidthContainer;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+[class*='grid-'] {
+	display: grid;
+}
+
+[class*='_stretch'] {
+	// position: relative;
+	// z-index: 0;
+	// min-height: calc(100vh - ($headerHeight + $footerHeight));
+}
+
+// todo --------------------------- Components ---------------------------------
+@import 'components/loading.scss';
+@import 'components/bem-block';
+// todo ------------------------- Page Blocks ----------------------------------
+// todo --------------------------- layout -------------------------------------
+@import 'layout/header.scss';
+
+@import 'layout/footer.scss';
+// todo ---------------------------- Page --------------------------------------
+@import 'layout/page.scss';
+// todo ---------------------------- Core --------------------------------------
+// todo -------------------------- Sections ------------------------------------

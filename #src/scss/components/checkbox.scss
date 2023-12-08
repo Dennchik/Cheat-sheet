@@ -1,0 +1,39 @@
+//* ---------------------------- [Input] ---------------------------------------
+.input {
+	display: block;
+	width: 100%;
+	border-radius: 0 !important;
+	border: 1px solid #dadada;
+	color: #333;
+}
+
+textarea.input {
+	padding: 0 0;
+	resize: none;
+}
+
+//* --------------------------- [Checkbox] -------------------------------------
+.checkbox {
+	position: relative;
+
+	// .checkbox__input
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		visibility: hidden;
+		// opacity: 0;
+	}
+
+	// .checkbox__text
+	&__text {
+		position: relative;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+
+		&::before {
+			content: '';
+		}
+	}
+}
