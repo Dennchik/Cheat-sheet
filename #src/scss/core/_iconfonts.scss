@@ -26,6 +26,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-3d {
+  &:before {
+    content: $icon-arrow-3d;
+  }
+}
 .icon-user-o {
   &:before {
     content: $icon-user-o;

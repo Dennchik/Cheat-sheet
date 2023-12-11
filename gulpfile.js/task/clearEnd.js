@@ -1,5 +1,5 @@
 //* Deleting a directory - Public
 const clear = () => {
-	return $.del('./public');
+	return $.del($.path.rootEnd);
 };
-module.exports = clear;
+module.exports = clear; 

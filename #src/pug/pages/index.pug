@@ -1,0 +1,16 @@
+extends ../layout/app
+block page 
+	div(class="wrapper")
+		include ../includes/mixins
+		include ../partials/header
+		.background
+			._lines
+		.page
+			._container
+				._backgrond 
+				include ../partials/sidebar-left
+			
+				main.main-content
+					| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				aside._sidebar-right
+		include ../partials/footer

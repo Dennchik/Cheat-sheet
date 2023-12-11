@@ -14,9 +14,9 @@ module.exports = {
 	pugMin: {
 		pretty: isDev,
 		plugins: [pugbem],
-		data: {
-			news: require('../../#src/data/news.json')
-		},
+		// data: {
+		// 	news: require('../../#src/data/news.json')
+		// },
 	},
 	htmlMin: {
 		collapseWhitespace: isProd,

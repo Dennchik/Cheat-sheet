@@ -47,4 +47,4 @@ exports.fontsStyle = fontsStyle;
 exports.watch = watcher;
 //* Assembling
 exports.default = $.app.isProd ? end : dev;
-exports.final = $.gulp.series(task.clearEnd, task.final, task.server);
+exports.final = $.gulp.series(task.clearEnd, task.final);

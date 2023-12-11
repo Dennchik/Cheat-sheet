@@ -2,21 +2,23 @@ const pathSrc = './#src';
 const pathDest = './build';
 const pathEnd = './public';
 
+
 module.exports = {
 	root: pathDest,
+	rootEnd: pathEnd,
 
 	json: {
 		watch: pathSrc + '/data/**/*.json',
 	},
-	pug: {
-		src: pathSrc + '/pug/*.pug',
+	pugs: {
+		src: pathSrc + '/pug/pages/*.pug',
 		watch: pathSrc + '/pug/**/*.{pug,json}',
 		dest: pathDest,
 	},
-	endHtml: {
-		src: pathDest + '/html/*.html',
-		watch: pathDest + '/html/*.html',
-		dest: pathEnd,
+	pug: {
+		src: pathSrc + '/pug/pages/**/*.pug',
+		watch: pathSrc + '/pug/**/*.pug',
+		dest: pathDest,
 	},
 	css: {
 		src: pathSrc + '/css/*.css',
@@ -28,34 +30,21 @@ module.exports = {
 		watch: pathSrc + '/scss/**/*.{sass,scss}',
 		dest: pathDest + '/css',
 	},
-	endCss: {
-		src: pathDest + '/**/*.css',
-		watch: pathDest + '/**/*.css',
-		dest: pathEnd + '/css',
-	},
 	js: {
 		src: pathSrc + '/js/*.js',
 		watch: pathSrc + '/js/**/*.js',
 		dest: pathDest + '/js',
-	},
-	endJs: {
-		src: pathDest + '/**/*.js',
-		watch: pathDest + '/**/*.js',
-		dest: pathEnd,
 	},
 	image: {
 		src: pathSrc + '/img/**/*.{png,jpg,jpeg,gif,svg,ico}',
 		watch: pathSrc + '/img/**/*.{png,jpg,jpeg,gif,svg,ico}',
 		dest: pathDest + '/img/',
 	},
-	endImage: {
-		src: pathDest + '/**/*.{png,jpg,jpeg,gif,svg,ico,webp}',
-		watch: pathDest + '/img/**/*.{png,jpg,jpeg,gif,svg,ico,webp}',
-		dest: pathEnd,
-	},
 	fonts: {
-		src: pathSrc + '/fonts/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
-		watch: pathSrc + '/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
+		// src: pathSrc + '/fonts/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
+		src: pathSrc + '/fonts/*.{ttf,svg}',
+		// watch: pathSrc + '/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
+		watch: pathSrc + '/fonts/**/*.{ttf,svg}',
 		dest: pathDest + '/fonts',
 	},
 	fontsStyle: {
@@ -70,5 +59,5 @@ module.exports = {
 		src: pathDest + '/**/*.*',
 
 		dest: pathEnd,
-	},
+	}
 };
