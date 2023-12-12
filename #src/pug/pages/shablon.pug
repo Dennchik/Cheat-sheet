@@ -1,16 +1,21 @@
-extends ../layout/app
-block page 
-	div(class="wrapper")
-		include ../includes/mixins
-		include ../partials/header
-		.background
-			._lines
-		.page
+extends ../layout/app_layout
+append links 
+	+link("./css/style.min.css")
+	+link("./img/icons/xfire.ico")
+	+script("./js/app.js")
+	+script("./js/main.js")
+block scripts 
+append vars
+	- var text="Shablon"
+include ../includes/mixins
+	- var text="Shablon"
+
+	append header
+	block page-content
+		.page-content 
 			._container
-				._backgrond 
-				include ../partials/sidebar-left
+				block side-bar
+					aside.nav-sidebar
+						include ../partials/sidebar-left
+	append footer 
 			
-				main.main-content
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-				aside._sidebar-right
-		include ../partials/footer

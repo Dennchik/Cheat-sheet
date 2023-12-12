@@ -20,3 +20,7 @@ mixin article(title)
 				block
 			else
 				p No content provided
+//-
+mixin link(href, name)
+	a(href=href)&attributes(attributes)= name
+

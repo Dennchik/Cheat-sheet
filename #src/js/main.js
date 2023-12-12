@@ -1,5 +1,4 @@
 const arrowLinks = document.querySelectorAll('.top-menu__link');
-
 arrowLinks.forEach((arrowLink) => {
 	arrowLink.addEventListener("click", () => {
 		const opened_menu = arrowLink.closest('.top-menu__top-nav').querySelector('._opened-menu');
