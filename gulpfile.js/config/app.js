@@ -31,12 +31,9 @@ module.exports = {
 		extname: '.css',
 		suffix: '.min',
 	},
-	renameJs: {
-		extname: '.js',
-		suffix: '.min',
-	},
 	fonter: {
-		formats: ['woff', 'ttf', 'eot', 'svg', 'otf'],
+		// formats: ['woff', 'ttf', 'eot', 'svg', 'otf'],
+		formats: ['woff', 'ttf', 'svg', 'otf'],
 	},
 	autoprefixer: {
 		cascade: false,

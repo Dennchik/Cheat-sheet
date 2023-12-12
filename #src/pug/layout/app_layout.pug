@@ -8,10 +8,10 @@ html(lang="ru")
 		block links
 			mixin link(href)
 				link(rel="stylesheet" type="text/css" href=href)
+			mixin icons(href)
+				link(rel="icon" type="image/icon" href=href)
 			mixin script(src)
 				script(defer="defer" type="text/javascript" src=src)
-		block scripts 
-			script(src='/jquery.js')
 		block vars
 			- var text
 		block title
