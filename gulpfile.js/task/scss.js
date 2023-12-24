@@ -32,7 +32,7 @@ const scss = () => {
 				sourceMap: true,
 			}
 		))
-		.pipe($.gulpIf($.app.isDev, $.gul.rename($.app.renameScss)))
+		.pipe($.gul.rename($.app.renameScss))
 		.pipe($.gulpIf($.app.isProd, $.gul.size({
 			title: 'После сжатия - (CSS):'
 		})))

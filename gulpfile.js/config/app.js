@@ -11,17 +11,17 @@ module.exports = {
 	webpack: {
 		mode: isProd ? 'production' : 'development',
 	},
-	pugMin: {
+	json: {
+
+	},
+	pug: {
 		pretty: isDev,
 		plugins: [pugbem],
-		// data: {
-		// 	news: require('../../#src/data/news.json')
-		// },
 	},
 	htmlMin: {
 		collapseWhitespace: isProd,
 	},
-	minJs: {
+	js: {
 		ext: {
 			src: '.js',
 			min: '.min.js'
@@ -32,18 +32,17 @@ module.exports = {
 		suffix: '.min',
 	},
 	fonter: {
-		// formats: ['woff', 'ttf', 'eot', 'svg', 'otf'],
 		formats: ['woff', 'ttf', 'svg', 'otf'],
 	},
 	autoprefixer: {
 		cascade: false,
 		grid: 'auto-place',
 		overrideBrowserslist: [
-			'Android >= 5',
-			'last 2 versions',
-			'Firefox >= 24',
-			'Safari >= 6',
-			'Opera >= 12',
+			'last 3 versions',
+			// 'Android >= 5',
+			// 'Firefox >= 24',
+			// 'Safari >= 6',
+			// 'Opera >= 12',
 		],
 	},
 	imagemin: {

@@ -1,12 +1,15 @@
 // todo -------------------------- Variables -----------------------------------
 @import 'core/variables';
 @import 'core/variables-icon';
-// todo --------------------------- Mixins ------------------------------------
+// todo --------------------------- Mixins -------------------------------------
 @import 'core/mixins';
 @import 'core/extend';
+//todo ---------------------------- Core ---------------------------------------
+@import 'core/modifiers';
 //todo ------------------------- Default fonts ---------------------------------
 // &display=swap&subset=cyrillic-ext
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,regular,400,500,700&display=swap&subset=cyrillic-ext);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext);
 // todo --------------------------- Fonts --------------------------------------
 @import 'core/fonts';
 //todo  ------------------------ Icon Fonts ------------------------------------
@@ -15,18 +18,16 @@
 @import 'core/reset';
 // todo ---------------------------- Ui ----------------------------------------
 @import 'core/ui';
+
 // todo -------------------------- Plugins -------------------------------------
-// @import 'components/swiper';
+// @import 'components/swiper'
 // todo -------------------------- Classes -------------------------------------
 // #region
 .wrapper {
-	position: relative;
 	display: flex;
 	flex-direction: column;
-	max-width: $maxWidth;
 	min-height: 100vh;
 	margin: 0 auto;
-	box-shadow: 0px 25px 25px rgba(13, 8, 8, 0.9333333333);
 }
 
 [class*='_container'] {
@@ -53,12 +54,14 @@
 }
 
 // todo --------------------------- Components ---------------------------------
-@import 'components/loading.scss';
 @import 'components/bem-block';
+@import 'components/bem-block';
+@import 'components/burger-bottom';
 // todo --------------------------- layout -------------------------------------
-@import 'layout/header.scss';
-@import 'layout/footer.scss';
-// todo ---------------------------- Page --------------------------------------
-@import 'layout/page.scss';
+@import 'layout/header';
+@import 'layout/footer';
+// todo --------------------------- Pages --------------------------------------
+@import 'pages/page';
 // todo -------------------------- Sections ------------------------------------
 @import 'section/sidebar-menu';
+@import 'section/reference';

@@ -1,0 +1,9 @@
+.menu-page > ._collapse:not(._show),
+.search-page > ._collapse:not(._show),
+.section-filter > ._collapse:not(._show) {
+	display: none;
+}
+// --mob-expanded-width: 320px;
+// 	--button-size: 1.5rem;
+// 	--offset: calc((var(--mob-expanded-width) - var(--button-size)) - 1.5rem);
+// transform: translateX(var(--offset)) rotate(180deg);

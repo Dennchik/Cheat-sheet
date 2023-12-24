@@ -1,23 +1,6 @@
-extends ../../layout/app
-append links 
-	+link("../css/style.min.css")
-	+link("../img/icons/xfire.ico")
-	+script("../js/app.js")
-	+script("../js/main.js")
-append vars
-	- var text="CSS Reference"
-block page 
-	div(class="wrapper")
-		include ../../includes/mixins
-		include ../../partials/header
-		.background
-			._lines
-		.page
-			._container
-				._backgrond 
-				include ../../partials/sidebar-left
-				block content
-					main.main-content
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					aside._sidebar-right
-		include ../../partials/footer
+extends ../../layout/app_layout
+block title
+	- var text='Css свойства'
+block main-content 
+	main.css-properties.page__main-content
+		include ../../partials/reference

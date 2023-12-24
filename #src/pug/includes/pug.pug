@@ -1,0 +1,145 @@
+mixin myMixin
+	p Это содержимое миксина
+	yield
+	div
+		p Это дополнительное содержимое миксина
+//-
+mixin listItems
+	ul.list-items
+		li One
+		li Two
+		li Three
+		li Four
+		li Five
+//-
+mixin article(title)
+	.article
+		.article-wrapper
+			h1= title
+			if block
+				block
+			else
+				p No content provided
+
++article('Hello world')
+	a(href="#" title="title").class link
+	a(href="")  This is my
+	p Amazing article
+//-
+mixin link(href, link)
+	a(href=href)&attributes(attributes)= link
+//-
+mixin list(className, ...items)
+	ul(class=className)
+		each item in items 
+			li=item 
+//-
+mixin article(title)
+	.article
+		.article-wrapper
+			h1= title
+			if block
+				block
+			else
+				p No content provided
+//-
+- var blocks={};
+
+mixin set(key)
+	- blocks[key] = this.block
+
+mixin A(buttonClass, buttonText, disabled)
+	button.button(class= buttonClass, disabled= disabled)
+		span
+			if block
+				block
+				- blocks.left && blocks.left()
+				| #{buttonText}
+				- blocks.right && blocks.right()
+			else
+				| #{buttonText}
+
++A("button_small button_filled", "Кнопка", false)
+	+set('left')
+		p l
+	+set('right')
+		p r
+
+//- initialization
+- var blocks = {}
+
+mixin set(key)
+	- blocks[key] = this.block
+
+//- mixin definition
+mixin layout
+	block
+	.main
+		if blocks.main
+			- blocks.main()
+		else
+			//- Do nothing
+
+	.side
+		if blocks.side
+			- blocks.side()
+		else
+			Do nothing
+			+set('main')
+			+set('side')
+
+p first mixin call
++layout
+	+set('main')
+		p Main
+	+set('side')
+		p Side
+
+p second mixin call
++layout
+	+set('main')
+		p new main
+	+set('side')
+		p Second side 
+
+p third mixin call
++layout
+	+set('side')
+		p Third side
+
+//- Не явные attributes.
+mixin link(href, name)
+	//- attributes == {class: "btn"}
+	a(class!=attributes.class href=href)= name
+
++link('/foo', 'foo')(class="btn")
+
+//- Миксин с &atributes.
+mixin link(href, name)
+	a(href=href)&attributes(attributes)= name
+
++link('/foo', 'foo')(class="btn")
+
+//- Неизвестное количество аргументов, синтаксис «rest arguments».
+mixin list(classes, ...items)
+	ul(class=classes)
+		each item in items
+			li= item
++list('my-list', 1, 2, 3, 4)
+
+//- Аргументы по умолчанию.
+//- Declaration
+mixin article(title='Default Title')
+	.article
+		.article-wrapper
+			h1= title
+
+//- Use
++article()
+
++article('Hello world')
+
+//-! Mxin link
+mixin b-link(link, name, mod)
+	- m = mod || ''
+	a(class= 'bottom' + '' + mod href=`${link}`)= name

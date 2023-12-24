@@ -1,0 +1,16 @@
+nav.top-navigation
+	//- ._container 
+	._scroller
+
+		ul._menu._scrolls
+			block navigation
+				each item in navigation
+					+list-item(
+						item.alink,
+						item.name,
+						'top-navigation__list',
+						'top-navigation__link'
+						)
+		._home
+			+link(href="@@webRoot/index.html")
+				+iconfont('home')

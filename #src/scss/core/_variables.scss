@@ -1,3 +1,48 @@
+//* ------------------------------- [Variables] --------------------------------
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1440px;
+$headerHeight: 9rem;
+//* ---------------------------- [Font Variables] ------------------------------
+$font-path: '../fonts';
+$font-defoult: 'Georgia', sans-serif;
+$font-family-title: 'Roboto Slab', sans-serif;
+$font-family-defoult: 'Segoe UI', sans-serif;
+$font-family-secondary: 'Systemia Regular', sans-serif;
+$font-color-defoult: #06293d;
+$font-weight-defoult: 500;
+$Font-size-defoult: 1.6rem;
+$fontColor: #d1d1d1;
+$fontWeight: 400;
+// -----------------------------------------------------------------------------
+$bgTransparent: #002f5a9c;
+$bgColor: #0f1317;
+$bgColorSecond: #cff09e;
+$textColor: #000000;
+$borderColor: #4e4e4f;
+$borderGray: #e7e7e7;
+// -----------------------------------------------------------------------------
+$boxShadow: 0px 3px 10px #03141a9c;
+$boxShadowSecond: 0px 25px 25px rgba(13, 8, 8, 0.9333333333);
+$BlackShadow: #000;
+// -----------------------------------------------------------------------------
+$secondColor: #0b486b;
+$colorSideText: #9bceb4;
+$blue: #8ff2ff;
+$brown: #584e4a;
+$orange: #f64e38;
+$darkcyan: darkcyan;
+$colorName: #002f5a;
+$hover: #1ab9ce;
+$gray: #999;
+// -----------------------------------------------------------------------------
+$text-title: #8ff2ff;
+$text-selection: #0054633f;
+$text-color-selection: #9b9999;
+$scrollbar-thumb: #005463;
+$scrollbar-thumb-bgcolor: #4e4e4f;
+
+// -----------------------------------------------------------------------------
 :root {
 	--pos: left center;
 	--size: 0;
@@ -7,31 +52,5 @@
 	--inset-left: 0;
 }
 
-//* ------------------------------- [Variables] --------------------------------
-$minWidth: 320px;
-$maxWidth: 1920px;
-$maxWidthContainer: 1440px;
-//* ---------------------------- [Font Variables] ------------------------------
-$font-family: 'Roboto', sans-serif;
-$font-family-secondary: 'Systemia Regular', sans-serif;
-$fontColor: #d1d1d1;
-$fontWeight: 300;
-$bgColor: #0f1317;
-$borderColor: #4e4e4f;
-$FontSize: 16px;
-$font-path: '../fonts';
-// -----------------------------------------------------------------------------
-$boxShadow: 10px 5px 5px #0d0808ee;
-$textColor: #d1d1d1;
-$blue: #17e4ff;
-$brown: #584e4a;
-$orange: #f64e38;
-$whitey: #c2c2c2;
-$darkcyan: #068292;
-$hover: #31c1d4;
-$BlackShadow: #000;
-$gray: #999;
-$borderGray: #e7e7e7;
-// -----------------------------------------------------------------------------
 $snap: cubic-bezier(1, 0.005, 0.24, 1);
 $bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);

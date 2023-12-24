@@ -1,26 +1,72 @@
-mixin myMixin
-	p Это содержимое миксина
-	yield
-	div
-		p Это дополнительное содержимое миксина
-//- 
-mixin listItems
-	ul.list-items
-		li One
-		li Two
-		li Three
-		li Four
-		li Five
-//- 
-mixin article(title)
-	.article
-		.article-wrapper
-			h1= title
-			if block
-				block
-			else
-				p No content provided
-//-
+//-! Mxin Head-Links
+mixin style(href)
+	link(rel="stylesheet" type="text/css" href=href)
+mixin icons(href)
+	link(rel="icon" type="image/x-icon" href=href)
+mixin script(src)
+	script(defer="defer" type="text/javascript" src=src)
+
+//-! Mxin link & attributes----------------------
 mixin link(href, name)
 	a(href=href)&attributes(attributes)= name
+		block
+//-! Mxin link-------------------------------
+mixin btn-link(type, text, mod)
+	- m = mod || ''
+	a(class=mod + '' type=type)= text
+		block
+//-! mixin iconFont		
+mixin iconfont(mod)
+	i(class='icon-' + mod)
+
+//-! Mxin list «rest arguments».
+mixin list-item(alink, name, list, link)
+	li(class=list)
+		a(class=link href=`${alink}`)=name
+
+//- initialization
+- var blocks = {}
+
+mixin set(key)
+	- blocks[key] = this.block
+
+//- mixin definition
+mixin layout
+	block
+	.page__main-content
+		if blocks.mainContent 
+			- blocks.mainContent ()
+		else
+			//- Do nothing
+
+	.side
+		if blocks.side
+			- blocks.side()
+		else
+			//- Do nothing
+	+set('main')
+	+set('side')
+
+
+//- p first mixin call
+//- +layout
+//- 	+set('main')
+//- 		p Main
+//- 	+set('side')
+//- 		p Side
+
+//- p second mixin call
+//- +layout
+//- 	+set('main')
+//- 		p new main
+//- 	+set('side')
+//- 		p Second side 
+
+//- p third mixin call
+//- +layout
+//- 	+set('side')
+//- 		p Third side
+
+
+
 

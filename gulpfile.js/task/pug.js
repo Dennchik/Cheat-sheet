@@ -1,3 +1,4 @@
+const data = require('gulp-data');
 //* Pug processing
 const pug = () => {
 	return $.gulp.src($.path.pug.src)
@@ -7,8 +8,11 @@ const pug = () => {
 				message: error.message
 			}))
 		}))
-		.pipe($.gul.pug($.app.pugMin))
-		.pipe($.gulp.dest($.path.pug.dest))
+		.pipe(data(function () {
+			return JSON.parse($.fs.readFileSync($.path.json.readFile));
+		}))
+		.pipe($.gul.pug($.app.pug))
+		.pipe($.gul.fileInclude())
 		.pipe($.gul.webpHtml())
 		.pipe($.gulp.dest($.path.pug.dest));
 };

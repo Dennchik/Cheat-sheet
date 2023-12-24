@@ -1,10 +1,6 @@
-const cb = () => { };
-const path = require('../config/path.js');
-let srsFonts = path.fontsStyle.src;
-let appFonts = path.fontsStyle.dest;
 const fontsStyle = (done) => {
-  let file_content = $.fs.readFileSync(path.fontsStyle.src);
-
+  let file_content = $.fs.readFileSync($.path.fontsStyle.src);
+  const cb = () => { };
   $.fs.writeFile($.path.fontsStyle.src, '', cb);
   $.fs.readdir($.path.fontsStyle.dest, function (err, items) {
     if (items) {

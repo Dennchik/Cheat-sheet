@@ -1,21 +1,29 @@
-extends ../layout/app_layout
-append links 
-	+link("./css/style.min.css")
-	+link("./img/icons/xfire.ico")
-	+script("./js/app.js")
-	+script("./js/main.js")
+//- extends ../layout/app_layout
+//- block title
+//- 	- var text='Shablon'
 
-append vars
-	- var text="Shablon"
-include ../includes/mixins
-	- var text="Shablon"
+//- block logo
+//- 	+link('./index.html',' ')(class='header__logo')
 
-	append header
-	block page-content
-		.page-content 
-			._container
-				block side-bar
-					aside.nav-sidebar
-						include ../partials/sidebar-left
-	append footer 
-			
+//- block iconfont 
+//- 	+iconfont('arrow-3d')
+
+//- block navigation
+//- 	include ../includes/variables.pug
+
+//- 	each item in navigation
+//- 		+list-item(
+//- 			item.alink,
+//- 			item.name,
+//- 			'top-navigation__list',
+//- 			'top-navigation__link'
+//- 			)
+
+
+//- block sidebar-menu
+//- 	include ../partials/sidebar-left
+
+//- block main-content
+
+//- 	append footer 
+

@@ -5,10 +5,13 @@
 	"main": "index.js",
 	"tipe": "module",
 	"scripts": {
-		"(1) START - Project (Build)": "gulp",
-		"(2) END - Project (Build)": "gulp --production",
-		"(3) FINAL - Project (Public)": "gulp final",
-		" Clear END": "gulp clearEnd"
+		"(1) Development": "gulp",
+		"(2) Production": "gulp --production",
+		"(3) (Public)": "gulp final",
+		"(4) (JADE)": "gulp pug",
+		"(5) (JSON)": "gulp json",
+		"(6) (CLEAR)": "gulp clear",
+		"TASKS": "gulp --tasks"
 	},
 	"author": "Dennchik",
 	"license": "ISC",
@@ -16,6 +19,9 @@
 		"url": "https://github.com/Dennchik/Cheat-sheet/issues"
 	},
 	"homepage": "https://github.com/Dennchik/Cheat-sheet#readme",
+	"browserslist": [
+		"last 3 version"
+	],
 	"babel": {
 		"presets": [
 			"@babel/preset-env"
@@ -32,6 +38,7 @@
 		"gulp-babel": "^8.0.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-csso": "^4.0.1",
+		"gulp-data": "^1.3.1",
 		"gulp-debug": "^4.0.0",
 		"gulp-file-include": "^2.3.0",
 		"gulp-fonter": "^0.3.0",
@@ -41,6 +48,7 @@
 		"gulp-if": "^3.0.0",
 		"gulp-imagemin": "^7.1.0",
 		"gulp-load-plugins": "^2.0.7",
+		"gulp-merge-json": "^2.1.2",
 		"gulp-minify": "^3.1.0",
 		"gulp-newer": "^1.4.0",
 		"gulp-notify": "^4.0.0",

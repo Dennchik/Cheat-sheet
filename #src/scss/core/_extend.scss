@@ -10,17 +10,31 @@
 	background-repeat: no-repeat;
 	transition: background-size 400ms;
 
-	&:hover {
+	&._opened-menu {
 		background-size:
 			0 1px,
-			100% 1px;
+			calc(100% - 2.25rem) 1px;
 	}
 }
-
-.gradient {
+.gradient-box {
+	background:
+		linear-gradient(to right, #0b486b9d, #0b486b93, #0b486b9d),
+		url('../img/header/bggrid.png') center / 100% 100% no-repeat;
+}
+.gradient-top-link {
+	text-shadow: $orange 1px 0 10px;
 	background: linear-gradient(to bottom, #008192, #90effc, #008192 100%);
 	color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+.gradient-box-darcsian {
+	background:
+		linear-gradient(to left, #0112182d, #02343733, #0423312a),
+		url('../img/header/bggrid.png') center / 100% 100% no-repeat;
+}
+.gradient {
+	background: linear-gradient(to right, transparent, transparent),
+		linear-gradient(to right, #f64e38, #8ff2ff);
 }

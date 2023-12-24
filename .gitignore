@@ -3,8 +3,10 @@
 .idea
 /.vscode
 .vscode
+desktop.ini
 node_modules
 Applications
 Temp
+!Temp
 Templates
 Build

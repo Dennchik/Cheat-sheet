@@ -1,39 +1,15 @@
 header.header
-	.top-menu._top._container
-		a(href="#")._image-logo
-		._top-nav
-			a._link(href="#") Tutorials
-				i.icon-arrow-3d
-			.sub-menu
-			a._link(href="#") Exercises
-				i.icon-arrow-3d
-			a._link(href="#") Services
-				i.icon-arrow-3d
-nav.bottom-menu
-	._container
-		._slogan
-		._items 
-			ul._list
-				li._list-item 
-					a._link(href="") Html
-			ul._list
-				li._list-item 
-					a._link(href="./") Pug 
-			ul._list
-				li._list-item 
-					a._link(href="D:/Web%20Development/MyProjects/Cheat-sheet/build/css-reference/css_reference.html") Css/Scss
-			ul._list
-				li._list-item 
-					a._link(href="") Sass
-			ul._list
-				li._list-item 
-					a._link(href="") JavaScript
-			ul._list
-				li._list-item 
-					a._link(href="") Php
-			ul._list
-				li._list-item 
-					a._link(href="") Git
-			ul._list
-				li._list-item 
-					a._link(href="") How to
+	block header-content
+		._container
+			._top-menu
+				._logo
+					+link('@@webRoot/index.html','')(class='header__image tooltips' data-title='Home page')
+				.menu-items._top-nav
+					block menu-links
+						+btn-link('button','Tutorials', 'menu-items__link')
+							+iconfont('angles-down-solid')
+						+btn-link('button','Exercises', 'menu-items__link')
+							+iconfont('angles-down-solid')
+						+btn-link('.button','Services', 'menu-items__link')
+							+iconfont('angles-down-solid')
+

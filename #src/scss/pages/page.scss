@@ -1,0 +1,38 @@
+.page {
+	border: 1px solid #000;
+	// z-index: 1;
+	display: flex;
+	width: 100%;
+
+	//.page__grid-content
+	&__grid-content {
+		grid-template-columns: 20.5rem 1fr;
+		transition: all 0.4s ease 0s;
+		grid-gap: 1rem;
+		@include _768 {
+			grid-template-columns: 4rem 1fr;
+		}
+	}
+
+	// .page__sidebar-menu-left
+	&__sidebar-menu-left {
+		// margin-right: 1rem;
+	}
+
+	// .page__main-content
+	&__main-content {
+		margin-right: 1rem;
+		box-shadow: -1px 1px 5px #000;
+	}
+}
+// .background {
+// 	position: fixed;
+// 	margin: 0 2rem;
+// 	height: 100%;
+// 	width: 100%;
+// 	min-width: 50%;
+// 	background: url('../img/world-map.png') center center / contain no-repeat
+// 		fixed;
+// 	opacity: 0.1;
+// 	z-index: 1;
+// }

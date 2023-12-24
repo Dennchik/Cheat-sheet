@@ -1,0 +1,56 @@
+.css-properties {
+	// .css-properties__section
+	&__section {
+		margin-bottom: 0.5rem;
+	}
+
+	// .css-properties__section-title
+	&__section-title {
+		position: sticky;
+		padding-left: 0.5rem;
+		display: flex;
+		top: 8rem;
+		height: 3rem;
+		line-height: 3rem;
+		text-align: left;
+		color: $blue;
+		border-top: 1px solid $borderColor;
+		border-bottom: 1px solid $borderColor;
+		background-color: $secondColor;
+		align-items: center;
+	}
+
+	// .css-properties__section-block
+	&__section-block {
+		display: grid;
+		grid-template-columns: 25% 1fr;
+	}
+
+	// .css-properties__property-name
+	&__property-name {
+		padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+		width: 100%;
+		text-align: right;
+		color: $colorName;
+		font-size: 1.7rem;
+		font-weight: 500;
+		font-family: $font-family-defoult;
+		justify-self: end;
+		border-bottom: 1px dotted #000;
+		border-right: 1px dotted #000;
+		line-height: 120%; /* 24/16 */
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	// .css-properties__description
+	&__description {
+		padding: 0.5rem 0.5rem 0.5rem 1rem;
+		font-family: 'Roboto', sans-serif;
+		line-height: 120%; /* 24/16 */
+		border-bottom: 1px dotted #000;
+	}
+}

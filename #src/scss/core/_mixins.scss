@@ -61,12 +61,25 @@
 	align-items: center;
 	justify-content: space-between;
 }
+// -----------------------------------------------------------------------------
 
-@mixin _1140 {
+@mixin _screen-690 {
+	@media screen and (max-width: 690px) {
+		@content;
+	}
+}
+
+@mixin _screen-920 {
+	@media screen and (max-width: 920px) {
+		@content;
+	}
+}
+@mixin _screen-1140 {
 	@media (max-width: 1140px) {
 		@content;
 	}
 }
+// -----------------------------------------------------------------------------
 
 @mixin _1024 {
 	@media (max-width: 1024px) {
@@ -190,18 +203,6 @@
 
 @mixin _min-690 {
 	@media (min-width: 690.98px) {
-		@content;
-	}
-}
-
-@mixin _screen-690 {
-	@media screen and (max-width: 690px) {
-		@content;
-	}
-}
-
-@mixin _screen-920 {
-	@media screen and (max-width: 920px) {
 		@content;
 	}
 }

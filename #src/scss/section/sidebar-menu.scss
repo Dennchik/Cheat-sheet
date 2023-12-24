@@ -1,0 +1,154 @@
+.sidebar-left {
+	border-radius: 0 0 5px 0;
+	border-bottom: 1px solid $borderColor;
+	position: fixed;
+
+	top: 4rem;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	min-height: calc(100vh - 4rem);
+	min-width: 20.5rem;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: $secondColor;
+	z-index: 9;
+	&::-webkit-scrollbar {
+		width: 0;
+	}
+	@include _768 {
+		transition: all 0.4s ease-in-out;
+		top: 4rem;
+		left: -16.5rem;
+		min-height: calc(100vh - 4rem);
+		&._open {
+			left: 0;
+			width: calc(320px - 0rem);
+			.sidebar-left__text {
+				top: 8rem;
+				--mob-expanded-width: 320px;
+				--button-size: 4rem;
+				--offset: calc(
+					(var(--mob-expanded-width) - var(--button-size)) - 0.3rem
+				);
+				transform: translateX(var(--offset)) rotate(180deg);
+				transition: all 0.55s ease-in-out;
+			}
+		}
+	}
+
+	// .sidebar-left__body
+	&__body {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+	}
+
+	// .sidebar-left__menu
+	&__menu {
+		height: 100%;
+		padding: 0 1.5rem 1.5rem 1.5rem;
+	}
+
+	// .sidebar-left__title
+	&__title {
+		z-index: 9;
+		position: sticky;
+		padding-left: 1.5rem;
+		top: 0rem;
+		height: 4rem;
+		background: $bgColor;
+		border-top: 1px solid $borderColor;
+		border-right: 1px solid $borderColor;
+		border-bottom: 1px solid $borderColor;
+		font: {
+			family: $font-family-title;
+			size: 1.6rem;
+			weight: 400;
+		}
+		text-transform: uppercase;
+		letter-spacing: 0.2px;
+
+		color: #8ff2ff;
+		span {
+			@extend .gradient-top-link;
+		}
+		@include flex-align-center-justify-space-between;
+		.icon-home {
+			color: $blue;
+			font-size: 2rem;
+			transition: all 0.4s ease-in-out;
+
+			&:hover {
+				color: $orange;
+			}
+		}
+	}
+
+	// .sidebar-left__list
+	&__list {
+		display: inline-block;
+		width: 100%;
+
+		font: {
+			family: $font-family-title;
+			size: 1.8rem;
+			weight: 500;
+		}
+	}
+
+	// .sidebar-left__list-item
+	&__list-item {
+		display: block;
+		width: 100%;
+	}
+
+	// .idebar-left__link
+	&__link {
+		display: inline-block;
+		width: 100%;
+		text-decoration: underline;
+		color: $colorSideText;
+		letter-spacing: 1.5px;
+		font: {
+			family: $font-family-defoult;
+			size: 1.6rem;
+			weight: 400;
+		}
+
+		line-height: 171.428571%; /* 24/14 */
+		&:hover {
+			color: $blue;
+		}
+	}
+
+	// .sidebar-left__text
+	&__text {
+		// border: 1px solid #000;
+
+		position: fixed;
+		top: 8rem;
+		bottom: 0;
+		writing-mode: vertical-rl;
+		width: 1.5rem;
+		line-height: 100%;
+		text-align: right;
+		font-size: 16px;
+		text-shadow: 1px 1px 3px #000000;
+		color: $darkcyan;
+		box-shadow: 0 0 5px $orange;
+		--mob-expanded-width: 20.5rem;
+		--button-size: 4rem;
+		--offset: calc((var(--mob-expanded-width) - 1.5rem) - 0.3rem);
+		transform: translateX(var(--offset)) rotate(180deg);
+		@include flex-align-center-justify-center;
+		@extend .gradient-top-link;
+
+		@include _768 {
+			width: 4rem;
+			transition: all 0.3s ease-in-out;
+			--offset: calc((var(--mob-expanded-width) - var(--button-size)) - 0.3rem);
+		}
+	}
+}
