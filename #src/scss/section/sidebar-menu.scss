@@ -1,8 +1,7 @@
 .sidebar-left {
 	border-radius: 0 0 5px 0;
-	border-bottom: 1px solid $borderColor;
+	border-bottom: 1px solid $border-color;
 	position: fixed;
-
 	top: 4rem;
 	bottom: 0;
 	width: 0;
@@ -11,8 +10,20 @@
 	min-width: 20.5rem;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	background-color: $secondColor;
+	background-color: $themes-color;
 	z-index: 9;
+	// ---------------------------------------------------------------------------
+	--mob-collapsed-width: 40px;
+	--mob-expanded-width: 320px;
+	--mob-hidden-width: calc(
+		(var(--mob-expanded-width) - var(--mob-collapsed-width)) * -1
+	);
+	--stripe-width: 10px;
+	--duration: 0.2s;
+	order: -1;
+	@extend .gradient;
+	// ---------------------------------------------------------------------------
+
 	&::-webkit-scrollbar {
 		width: 0;
 	}
@@ -24,6 +35,7 @@
 		&._open {
 			left: 0;
 			width: calc(320px - 0rem);
+
 			.sidebar-left__text {
 				top: 8rem;
 				--mob-expanded-width: 320px;
@@ -48,20 +60,19 @@
 	// .sidebar-left__menu
 	&__menu {
 		height: 100%;
-		padding: 0 1.5rem 1.5rem 1.5rem;
+		padding-left: 1.5rem;
 	}
 
 	// .sidebar-left__title
 	&__title {
 		z-index: 9;
 		position: sticky;
-		padding-left: 1.5rem;
 		top: 0rem;
 		height: 4rem;
-		background: $bgColor;
-		border-top: 1px solid $borderColor;
-		border-right: 1px solid $borderColor;
-		border-bottom: 1px solid $borderColor;
+		background: $background-menu;
+		border-top: 1px solid $border-color;
+		border-right: 1px solid $border-color;
+		border-bottom: 1px solid $border-color;
 		font: {
 			family: $font-family-title;
 			size: 1.6rem;
@@ -72,11 +83,16 @@
 
 		color: #8ff2ff;
 		span {
+			margin-left: 1.5rem;
+			@include _768 {
+				margin: 0 5rem;
+			}
+
 			@extend .gradient-top-link;
 		}
 		@include flex-align-center-justify-space-between;
 		.icon-home {
-			color: $blue;
+			color: $blue-light;
 			font-size: 2rem;
 			transition: all 0.4s ease-in-out;
 
@@ -102,24 +118,24 @@
 	&__list-item {
 		display: block;
 		width: 100%;
+		margin: 0.2rem 0 0.2rem 1rem;
 	}
 
-	// .idebar-left__link
+	// .sidebar-left__link
 	&__link {
 		display: inline-block;
 		width: 100%;
-		text-decoration: underline;
-		color: $colorSideText;
+		color: $nav-link-color;
 		letter-spacing: 1.5px;
 		font: {
-			family: $font-family-defoult;
-			size: 1.6rem;
-			weight: 400;
+			family: $font-family-secondary;
+			weight: 300;
 		}
 
 		line-height: 171.428571%; /* 24/14 */
 		&:hover {
-			color: $blue;
+			text-decoration: underline;
+			color: $blue-light;
 		}
 	}
 

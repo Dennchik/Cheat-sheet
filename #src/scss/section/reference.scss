@@ -13,31 +13,29 @@
 		height: 3rem;
 		line-height: 3rem;
 		text-align: left;
-		color: $blue;
-		border-top: 1px solid $borderColor;
-		border-bottom: 1px solid $borderColor;
-		background-color: $secondColor;
+		color: $blue-light;
+		border-top: 1px solid $border-color;
+		border-bottom: 1px solid $border-color;
+		background-color: $themes-color;
 		align-items: center;
 	}
 
 	// .css-properties__section-block
 	&__section-block {
 		display: grid;
-		grid-template-columns: 25% 1fr;
+		grid-template-columns: minmax(105px, 25%) 1fr;
 	}
 
 	// .css-properties__property-name
 	&__property-name {
-		padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+		padding: 0.5rem;
 		width: 100%;
-		text-align: right;
-		color: $colorName;
-		font-size: 1.7rem;
-		font-weight: 500;
-		font-family: $font-family-defoult;
-		justify-self: end;
+		text-align: left;
+		color: $second-color;
+		font-weight: bold;
 		border-bottom: 1px dotted #000;
 		border-right: 1px dotted #000;
+		letter-spacing: 1.2px;
 		line-height: 120%; /* 24/16 */
 		a {
 			&:hover {
@@ -48,9 +46,9 @@
 
 	// .css-properties__description
 	&__description {
-		padding: 0.5rem 0.5rem 0.5rem 1rem;
-		font-family: 'Roboto', sans-serif;
+		padding: 0.5rem;
 		line-height: 120%; /* 24/16 */
 		border-bottom: 1px dotted #000;
+		letter-spacing: 0.8px;
 	}
 }

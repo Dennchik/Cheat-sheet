@@ -5,13 +5,13 @@
 		&::after {
 			content: attr(data-title);
 			border-radius: 0.6rem;
-			border: 1px dashed $blue;
+			border: 1px dashed $blue-light;
 			background-color: #23343bde;
 			position: absolute;
 			top: 25%;
 			left: 90%;
 			padding: 1.2rem;
-			color: $blue;
+			color: $blue-light;
 			opacity: 0;
 			visibility: hidden;
 			transition: all 0.4s ease-in-out;
@@ -29,7 +29,7 @@
 		&::before {
 			content: '';
 			border: 9px solid transparent;
-			border-right: 9px dashed $blue;
+			border-right: 9px dashed $blue-light;
 			position: absolute;
 			z-index: 9;
 			left: 90%;

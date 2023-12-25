@@ -1,6 +1,6 @@
 .grad_underline {
 	background: linear-gradient(to right, transparent, transparent),
-		linear-gradient(to right, $orange, $blue);
+		linear-gradient(to right, $orange, $blue-light);
 	background-size:
 		100% 1px,
 		0 1px;
@@ -13,12 +13,12 @@
 	&._opened-menu {
 		background-size:
 			0 1px,
-			calc(100% - 2.25rem) 1px;
+			calc(100% - 3rem) 1px;
 	}
 }
 .gradient-box {
 	background:
-		linear-gradient(to right, #0b486b9d, #0b486b93, #0b486b9d),
+		linear-gradient(to right, #0b486bbd, #0b486b, #0b486bbd),
 		url('../img/header/bggrid.png') center / 100% 100% no-repeat;
 }
 .gradient-top-link {
@@ -29,12 +29,7 @@
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-.gradient-box-darcsian {
-	background:
-		linear-gradient(to left, #0112182d, #02343733, #0423312a),
-		url('../img/header/bggrid.png') center / 100% 100% no-repeat;
-}
+
 .gradient {
-	background: linear-gradient(to right, transparent, transparent),
-		linear-gradient(to right, #f64e38, #8ff2ff);
+	background: linear-gradient(to left, #0b486bbd, #0b486b77, #0b486bbd);
 }

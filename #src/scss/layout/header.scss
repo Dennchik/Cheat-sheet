@@ -37,7 +37,7 @@
 	// .header__image
 	&__image {
 		height: 4rem;
-		background: url('../img/header/earth_icon.png') center / cover no-repeat;
+		background: url('../img/header/earth-icon.png') center / cover no-repeat;
 		@include flex-align-center;
 
 		@include _425 {
@@ -59,7 +59,7 @@
 		font-family: $font-family-secondary;
 		font-size: 1.6rem;
 		font-weight: 400;
-		color: $blue;
+		color: $blue-light;
 		text-transform: uppercase;
 		display: flex;
 		align-items: center;
@@ -72,8 +72,11 @@
 
 		.icon-angles-down-solid {
 			font-size: 1.6rem;
-			margin-left: 0.5rem;
+
 			transition: all 0.5s ease-in-out;
+			&::before {
+				margin: 0 0.5rem;
+			}
 		}
 
 		&._opened-menu {
@@ -99,10 +102,10 @@
 	min-width: calc(100% - 20.5rem);
 	height: 4rem;
 	white-space: nowrap;
-	border-top: 1px solid $borderColor;
-	border-bottom: 1px solid $borderColor;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
 	box-shadow: $boxShadow;
-	background: $bgColor;
+	background: $background-menu;
 	@include flex-align-center;
 	@include _768 {
 		margin-left: 4rem;
@@ -140,7 +143,7 @@
 		font-family: $font-family-secondary;
 		font-size: 1.6rem;
 		font-weight: 400;
-		color: $blue;
+		color: $blue-light;
 		text-transform: uppercase;
 		@extend .grad_underline;
 		&:hover {
@@ -152,11 +155,17 @@
 
 	// .top-navigation__home
 	&__home {
+		border-left: 1px solid $border-color;
+		//
+		width: 4rem;
+		height: 4rem;
 		.icon-home {
-			color: $blue;
+			color: $blue-light;
 			font-size: 2rem;
 			transition: all 0.4s ease-in-out;
-
+			&::before {
+				padding-left: 1.7rem;
+			}
 			&:hover {
 				color: $orange;
 			}

@@ -10,9 +10,9 @@ body {
 	height: 100%;
 	counter-reset: heading;
 	// color: rgb(234, 205, 147);
-	color: $font-color-defoult;
+	color: $font-body-color;
 	// overflow-x: hidden;
-	background-color: $bgColorSecond;
+	background-color: $background-color-second;
 
 	// user-select: none;
 	@include _1024 {
@@ -23,8 +23,12 @@ body {
 body {
 	font:
 		16px/1.4 Georgia,
-		serif;
-	// font-size: $Font-size-defoult;
+		sans-serif;
+	@include _320 {
+		font:
+			15px/1.4 Georgia,
+			sans-serif;
+	}
 }
 
 * {
@@ -164,35 +168,35 @@ h6 {
 }
 
 ::-webkit-scrollbar-track {
-	// background: $bgTransparent;
-	background: transparent;
+	background: $scrollbar-thumb-bgcolor;
+	// background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-	border: 1px solid $borderColor;
+	border: 1px solid $border-color;
 	border-radius: 2px;
-	background-color: $scrollbar-thumb;
+	background-color: $themes-color;
 	background-image: -webkit-linear-gradient(
 		45deg,
-		$bgColor 25%,
+		$background-thumb 25%,
 		transparent 25%,
 		transparent 50%,
-		$bgColor 50%,
-		$bgColor 75%,
+		$background-thumb 50%,
+		$background-thumb 75%,
 		transparent 75%,
 		transparent
 	);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background-color: $bgColor;
+	background-color: $background-thumb;
 	background-image: -webkit-linear-gradient(
 		45deg,
-		$scrollbar-thumb 25%,
+		$themes-color 25%,
 		transparent 25%,
 		transparent 50%,
-		$scrollbar-thumb 50%,
-		$scrollbar-thumb 75%,
+		$themes-color 50%,
+		$themes-color 75%,
 		transparent 75%,
 		transparent
 	);

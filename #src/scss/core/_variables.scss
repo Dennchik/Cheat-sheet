@@ -9,38 +9,41 @@ $font-defoult: 'Georgia', sans-serif;
 $font-family-title: 'Roboto Slab', sans-serif;
 $font-family-defoult: 'Segoe UI', sans-serif;
 $font-family-secondary: 'Systemia Regular', sans-serif;
+$font-body-color: #041925;
 $font-color-defoult: #06293d;
-$font-weight-defoult: 500;
-$Font-size-defoult: 1.6rem;
-$fontColor: #d1d1d1;
-$fontWeight: 400;
+$font-weight-defoult: 470;
+$font-size-defoult: 1.6rem;
+//* -------------------------------- [Color] -----------------------------------
+$body-color: #06293d;
+$themes-color: #0b486b;
+$background-menu: #0f1317;
+$background-thumb: #0f1317;
+$text-color: #000000;
+//* ---------------------------- [Other colors] --------------------------------
+$nav-link-color: #9bceb4;
+$blue-light: #8ff2ff;
+$second-color: #002f5a;
+$colorSideText: #9bceb4;
+$brown: #584e4a;
+$orange: #f64e38;
+$darkcyan: darkcyan;
+$gray: #999;
 // -----------------------------------------------------------------------------
-$bgTransparent: #002f5a9c;
-$bgColor: #0f1317;
-$bgColorSecond: #cff09e;
-$textColor: #000000;
-$borderColor: #4e4e4f;
-$borderGray: #e7e7e7;
+$background-transparent: #002f5a9c;
+$background-color-second: #cff09e;
+$border-color: #4e4e4f;
+
 // -----------------------------------------------------------------------------
 $boxShadow: 0px 3px 10px #03141a9c;
 $boxShadowSecond: 0px 25px 25px rgba(13, 8, 8, 0.9333333333);
 $BlackShadow: #000;
 // -----------------------------------------------------------------------------
-$secondColor: #0b486b;
-$colorSideText: #9bceb4;
-$blue: #8ff2ff;
-$brown: #584e4a;
-$orange: #f64e38;
-$darkcyan: darkcyan;
-$colorName: #002f5a;
-$hover: #1ab9ce;
-$gray: #999;
+
 // -----------------------------------------------------------------------------
 $text-title: #8ff2ff;
 $text-selection: #0054633f;
 $text-color-selection: #9b9999;
-$scrollbar-thumb: #005463;
-$scrollbar-thumb-bgcolor: #4e4e4f;
+$scrollbar-thumb-bgcolor: #07325a8a;
 
 // -----------------------------------------------------------------------------
 :root {
