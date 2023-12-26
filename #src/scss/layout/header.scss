@@ -37,7 +37,7 @@
 	// .header__image
 	&__image {
 		height: 4rem;
-		background: url('../img/header/earth-icon.png') center / cover no-repeat;
+		background: url('../img/header/earth.png') center / cover no-repeat;
 		@include flex-align-center;
 
 		@include _425 {
@@ -94,12 +94,11 @@
 
 .top-navigation {
 	position: sticky;
-	margin-bottom: 1rem;
 	top: 4rem;
-	margin-left: 20.5rem;
+	margin-left: 28.5rem;
 	z-index: 2;
 	width: 0;
-	min-width: calc(100% - 20.5rem);
+	min-width: calc(100% - var(--sidebar-width));
 	height: 4rem;
 	white-space: nowrap;
 	border-top: 1px solid $border-color;

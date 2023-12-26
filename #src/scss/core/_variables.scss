@@ -53,6 +53,11 @@ $scrollbar-thumb-bgcolor: #07325a8a;
 	--inset-right: 100%;
 	--inset-bottom: 100%;
 	--inset-left: 0;
+	// ---------------------------------------------------------------------------
+	--stripe-width: 10px;
+	--nav-marker-border: #3b8686;
+	--sidebar-width: 28.5rem;
+	--mob-expanded-width: 320px;
 }
 
 $snap: cubic-bezier(1, 0.005, 0.24, 1);

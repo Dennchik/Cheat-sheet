@@ -4,23 +4,13 @@
 	position: fixed;
 	top: 4rem;
 	bottom: 0;
-	width: 0;
-	height: 0;
+	// width: 0;
+	// height: 0;
 	min-height: calc(100vh - 4rem);
-	min-width: 20.5rem;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	background-color: $themes-color;
+	// overflow-y: scroll;
+	// overflow-x: hidden;
 	z-index: 9;
-	// ---------------------------------------------------------------------------
-	--mob-collapsed-width: 40px;
-	--mob-expanded-width: 320px;
-	--mob-hidden-width: calc(
-		(var(--mob-expanded-width) - var(--mob-collapsed-width)) * -1
-	);
-	--stripe-width: 10px;
-	--duration: 0.2s;
-	order: -1;
+
 	@extend .gradient;
 	// ---------------------------------------------------------------------------
 
@@ -28,10 +18,11 @@
 		width: 0;
 	}
 	@include _768 {
-		transition: all 0.4s ease-in-out;
-		top: 4rem;
-		left: -16.5rem;
-		min-height: calc(100vh - 4rem);
+		--stripe-width: 6px;
+		width: var(--mob-expanded-width);
+		transition: transform var(--duration);
+	}
+	@include _768 {
 		&._open {
 			left: 0;
 			width: calc(320px - 0rem);
@@ -144,27 +135,26 @@
 		// border: 1px solid #000;
 
 		position: fixed;
-		top: 8rem;
+		top: 4rem;
 		bottom: 0;
 		writing-mode: vertical-rl;
-		width: 1.5rem;
 		line-height: 100%;
 		text-align: right;
 		font-size: 16px;
 		text-shadow: 1px 1px 3px #000000;
 		color: $darkcyan;
 		box-shadow: 0 0 5px $orange;
-		--mob-expanded-width: 20.5rem;
 		--button-size: 4rem;
-		--offset: calc((var(--mob-expanded-width) - 1.5rem) - 0.3rem);
 		transform: translateX(var(--offset)) rotate(180deg);
 		@include flex-align-center-justify-center;
 		@extend .gradient-top-link;
 
 		@include _768 {
 			width: 4rem;
-			transition: all 0.3s ease-in-out;
 			--offset: calc((var(--mob-expanded-width) - var(--button-size)) - 0.3rem);
+		}
+		@include _min-768 {
+			display: none;
 		}
 	}
 }

@@ -1,12 +1,11 @@
 .burger-bottom {
-	position: fixed;
+	position: sticky;
 	background: $background-menu;
-	border-right: 1px solid $border-color;
-	top: 4.1rem;
-	left: 0;
+	top: 0rem;
 	flex: 0;
+	left: 0;
+	transform: translateX(var(--mob-hidden-width));
 	@include _min-768 {
-		flex: 4rem;
 		display: none;
 	}
 	&__items {

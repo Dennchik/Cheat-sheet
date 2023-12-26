@@ -12,11 +12,11 @@ if (isMobile.any()) {
 }
 const mediaQuery = window.matchMedia('(max-width: 768px)');
 if (mediaQuery.matches) {
-	const openSide = document.querySelector('.sidebar-left');
+	const openSide = document.querySelector('.page__left-side');
 	const btns = openSide.querySelectorAll('.triggerBtn');
 	for (let i = 0; i < btns.length; i++) {
 		btns[i].addEventListener('click', () => {
-			openSide.classList.toggle('_open');
+			openSide.classList.toggle('page__left-side_collapse');
 			for (let i = 0; i < btns.length; i++) {
 				btns[i].classList.toggle('_open');
 			}

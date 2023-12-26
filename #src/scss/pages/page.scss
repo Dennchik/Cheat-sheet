@@ -1,40 +1,52 @@
+.page__left-side,
+.sidebar-left {
+	width: var(--sidebar-width);
+	min-width: var(--sidebar-width);
+	max-width: var(--mob-expanded-width);
+}
 .page {
-	// z-index: 1;
-	display: flex;
-	width: 100%;
-
 	//.page__grid-content
-	&__grid-content {
-		grid-template-columns: 20.5rem 1fr;
+	&__content {
+		display: flex;
 		width: 100%;
-		transition: all 0.4s ease 0s;
+		min-height: 100%;
+		// transition: all 0.4s ease 0s;
+	}
+
+	// .page__left-side
+	&__left-side {
+		--mob-collapsed-width: 4rem;
+		--mob-expanded-width: 320px;
+		--mob-hidden-width: calc(
+			(var(--mob-expanded-width) - var(--mob-collapsed-width)) * -1
+		);
+		--stripe-width: 10px;
+		--duration: 0.2s;
+		position: relative;
+		order: -1;
+		z-index: 2;
+		flex-shrink: 0;
 
 		@include _768 {
-			grid-template-columns: 4rem 1fr;
+			min-width: 0;
+			width: var(--mob-collapsed-width);
+			&_collapse {
+				.sidebar-left {
+					transform: translateX(var(--mob-hidden-width));
+					overflow: hidden;
+				}
+				.burger-bottom {
+					transform: translateX(0);
+				}
+			}
 		}
 	}
-
-	// .page__sidebar-menu-left
-	&__sidebar-menu-left {
-		// margin-right: 1rem;
-	}
-
 	// .page__main-content
 	&__main-content {
+		flex: 1;
 		margin: 1.5rem;
 		@include _320 {
 			margin: 1.5rem 0.5rem;
 		}
 	}
 }
-// .background {
-// 	position: fixed;
-// 	margin: 0 2rem;
-// 	height: 100%;
-// 	width: 100%;
-// 	min-width: 50%;
-// 	background: url('../img/world-map.png') center center / contain no-repeat
-// 		fixed;
-// 	opacity: 0.1;
-// 	z-index: 1;
-// }
