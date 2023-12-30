@@ -11,6 +11,9 @@ const scss = () => {
 		.pipe($.gulpIf($.app.isDev, $.gul.sourcemaps.init({
 			largeFile: true
 		})))
+		.pipe($.gulpIf($.app.isDev, $.gul.debug({
+			title: 'Source - Maps (INIT)'
+		})))
 		.pipe($.sass.sync({
 			outputStyle: 'expanded',
 		}).on('error', $.gul.notify.onError()))
@@ -22,10 +25,10 @@ const scss = () => {
 		.pipe($.gulpIf($.app.isProd, $.gul.groupCssMediaQueries()))
 		.pipe($.gulpIf($.app.isProd, $.gul.shorthand()))
 		.pipe($.gulpIf($.app.isProd, $.gul.webpCss()))
-		.pipe($.gulpIf($.app.isProd, $.gulp.dest($.path.scss.dest)))
-		.pipe($.gulpIf($.app.isProd, $.gul.size({
+		.pipe($.gulp.dest($.path.scss.dest))
+		.pipe($.gul.size({
 			title: 'До сжатия - (CSS):'
-		})))
+		}))
 		.pipe($.gul.csso(
 			{
 				restructure: true,

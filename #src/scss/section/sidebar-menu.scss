@@ -1,14 +1,14 @@
 .sidebar-left {
+	background: $themes-color;
 	border-radius: 0 0 5px 0;
 	border-bottom: 1px solid $border-color;
 	position: fixed;
-	top: 4rem;
 	bottom: 0;
-	// width: 0;
-	// height: 0;
+	width: 0;
+	height: 0;
 	min-height: calc(100vh - 4rem);
-	// overflow-y: scroll;
-	// overflow-x: hidden;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	z-index: 9;
 
 	@extend .gradient;
@@ -21,23 +21,6 @@
 		--stripe-width: 6px;
 		width: var(--mob-expanded-width);
 		transition: transform var(--duration);
-	}
-	@include _768 {
-		&._open {
-			left: 0;
-			width: calc(320px - 0rem);
-
-			.sidebar-left__text {
-				top: 8rem;
-				--mob-expanded-width: 320px;
-				--button-size: 4rem;
-				--offset: calc(
-					(var(--mob-expanded-width) - var(--button-size)) - 0.3rem
-				);
-				transform: translateX(var(--offset)) rotate(180deg);
-				transition: all 0.55s ease-in-out;
-			}
-		}
 	}
 
 	// .sidebar-left__body
@@ -58,6 +41,8 @@
 	&__title {
 		z-index: 9;
 		position: sticky;
+		left: 0;
+		width: var(--sidebar-widt);
 		top: 0rem;
 		height: 4rem;
 		background: $background-menu;
@@ -71,7 +56,6 @@
 		}
 		text-transform: uppercase;
 		letter-spacing: 0.2px;
-
 		color: #8ff2ff;
 		span {
 			margin-left: 1.5rem;
@@ -132,26 +116,33 @@
 
 	// .sidebar-left__text
 	&__text {
-		// border: 1px solid #000;
-
+		--offset: calc((var(--mob-expanded-width) - var(--button-size)) - 0.3rem);
 		position: fixed;
-		top: 4rem;
 		bottom: 0;
-		writing-mode: vertical-rl;
-		line-height: 100%;
-		text-align: right;
+		z-index: 1;
 		font-size: 16px;
 		text-shadow: 1px 1px 3px #000000;
 		color: $darkcyan;
-		box-shadow: 0 0 5px $orange;
-		--button-size: 4rem;
+		outline: none;
+		border-right: 1px dashed #4c6f7567;
+		height: calc(100vh - 8rem);
 		transform: translateX(var(--offset)) rotate(180deg);
+		width: var(--button-size);
+		transition: transform var(--duration);
+		flex-direction: column;
 		@include flex-align-center-justify-center;
-		@extend .gradient-top-link;
 
-		@include _768 {
-			width: 4rem;
-			--offset: calc((var(--mob-expanded-width) - var(--button-size)) - 0.3rem);
+		.icon-point-right {
+			transition: all 0.3s ease-in-out;
+			font-size: 20px;
+			@extend .gradient-top-link;
+		}
+		span {
+			writing-mode: vertical-rl;
+			@extend .gradient-top-link;
+			font-size: 10px;
+			display: inline-block;
+			margin: 5rem 0;
 		}
 		@include _min-768 {
 			display: none;

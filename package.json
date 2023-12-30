@@ -15,6 +15,10 @@
 	},
 	"author": "Dennchik",
 	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Dennchik/Cheat-sheet"
+	},
 	"bugs": {
 		"url": "https://github.com/Dennchik/Cheat-sheet/issues"
 	},
@@ -32,6 +36,7 @@
 		"@babel/preset-env": "^7.23.2",
 		"@types/jest": "^29.5.11",
 		"browser-sync": "^2.27.10",
+		"css-loader": "^6.8.1",
 		"eslint-config-prettier": "^8.5.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",
@@ -75,6 +80,7 @@
 		"prettier": "2.7.1",
 		"require-dir": "^1.2.0",
 		"sass": "^1.66.1",
+		"style-loader": "^3.3.3",
 		"webpack": "^5.88.2",
 		"webpack-stream": "^7.0.0"
 	},

@@ -57,7 +57,11 @@ $scrollbar-thumb-bgcolor: #07325a8a;
 	--stripe-width: 10px;
 	--nav-marker-border: #3b8686;
 	--sidebar-width: 28.5rem;
+	--duration: 0.3s;
+
+	--button-size: 4rem;
 	--mob-expanded-width: 320px;
+	--mob-collapsed-width: 4rem;
 }
 
 $snap: cubic-bezier(1, 0.005, 0.24, 1);

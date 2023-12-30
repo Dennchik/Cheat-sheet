@@ -10,18 +10,13 @@
 		display: flex;
 		width: 100%;
 		min-height: 100%;
-		// transition: all 0.4s ease 0s;
 	}
 
 	// .page__left-side
 	&__left-side {
-		--mob-collapsed-width: 4rem;
-		--mob-expanded-width: 320px;
 		--mob-hidden-width: calc(
 			(var(--mob-expanded-width) - var(--mob-collapsed-width)) * -1
 		);
-		--stripe-width: 10px;
-		--duration: 0.2s;
 		position: relative;
 		order: -1;
 		z-index: 2;
@@ -37,6 +32,9 @@
 				}
 				.burger-bottom {
 					transform: translateX(0);
+				}
+				.icon-point-right {
+					transform: rotate(180deg);
 				}
 			}
 		}
