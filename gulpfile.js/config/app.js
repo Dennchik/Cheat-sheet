@@ -8,19 +8,13 @@ module.exports = {
 	isProd: isProd,
 	isDev: isDev,
 
+
 	webpack: {
 		mode: isProd ? 'production' : 'development',
 		entry: {
 			main: './#src/js/main.js',
 			app: './#src/js/app.js'
 		},
-	},
-	json: {
-		fileName: 'data.json',
-		src: pathSrc + '/data/*.json',
-		watch: pathSrc + '/data/*.json',
-		dest: pathSrc + '/data/temp',
-		readFile: pathSrc + '/data/temp/data.json'
 	},
 	pug: {
 		pretty: isDev,
