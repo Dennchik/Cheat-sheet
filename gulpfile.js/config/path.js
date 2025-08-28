@@ -34,6 +34,12 @@ module.exports = {
 		watch: pathSrc + '/img/**/*.{png,jpg,jpeg,gif,svg,ico}',
 		dest: pathDest + '/img/'
 	},
+	svgSpr: {
+		src: pathSrc + '/img-sprite/**/*.svg',
+		watch: pathSrc + '/img-sprite/**/*.svg',
+		dest: pathDest + '/img/',
+		destJs: pathDest + '/js/',
+	},
 	fonts: {
 		src: pathSrc + '/fonts/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
 		watch: pathSrc + '/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',

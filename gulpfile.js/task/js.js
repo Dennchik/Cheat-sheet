@@ -7,6 +7,7 @@ const js = () => {
 				message: error.message
 			}))
 		}))
+		.pipe($.gul.fileInclude())
 		// .pipe($.gul.babel())
 		.pipe($.webpack($.app.webpack))
 		.pipe($.gulpIf($.app.isDev, $.gul.sourcemaps.init({

@@ -117,6 +117,13 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Georgia Bolditalic";
+  font-display: swap;
+  src: url("../fonts/Georgia Bolditalic.eot") format("eot"), url("../fonts/Georgia Bolditalic.woff") format("woff"), url("../fonts/Georgia Bolditalic.woff2") format("woff2"), url("../fonts/Georgia Bolditalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
   font-family: "Georgia";
   font-display: swap;
   src: url("../fonts/Georgia.eot") format("eot"), url("../fonts/Georgia.woff") format("woff"), url("../fonts/Georgia.woff2") format("woff2"), url("../fonts/Georgia.ttf") format("truetype");
@@ -138,6 +145,13 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Segoe UI";
+  font-display: swap;
+  src: url("../fonts/Segoe UI.eot") format("eot"), url("../fonts/Segoe UI.woff") format("woff"), url("../fonts/Segoe UI.woff2") format("woff2"), url("../fonts/Segoe UI.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
   font-family: "Systemia Regular";
   font-display: swap;
   src: url("../fonts/Systemia Regular.eot") format("eot"), url("../fonts/Systemia Regular.woff") format("woff"), url("../fonts/Systemia Regular.woff2") format("woff2"), url("../fonts/Systemia Regular.ttf") format("truetype");
@@ -148,20 +162,6 @@
   font-family: "Vhiena Regular";
   font-display: swap;
   src: url("../fonts/Vhiena Regular.eot") format("eot"), url("../fonts/Vhiena Regular.woff") format("woff"), url("../fonts/Vhiena Regular.woff2") format("woff2"), url("../fonts/Vhiena Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Segoe UI";
-  font-display: swap;
-  src: url("../fonts/Segoe UI.eot") format("eot"), url("../fonts/Segoe UI.woff") format("woff"), url("../fonts/Segoe UI.woff2") format("woff2"), url("../fonts/Segoe UI.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Georgia Bolditalic";
-  font-display: swap;
-  src: url("../fonts/Georgia Bolditalic.eot") format("eot"), url("../fonts/Georgia Bolditalic.woff") format("woff"), url("../fonts/Georgia Bolditalic.woff2") format("woff2"), url("../fonts/Georgia Bolditalic.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }

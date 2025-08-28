@@ -1,5 +1,5 @@
 // === Определение устройства вывода ===
-"use strict";
+
 var isMobile = {
 	Android: function () {
 		return navigator.userAgent.match(/Android/i);
@@ -27,3 +27,4 @@ var isMobile = {
 			isMobile.Windows());
 	}
 };
+console.log(isMobile);

@@ -1,2 +1,2 @@
-import './module/loading.js';
-import './module/dragscroll.js';
+// import './module/loading.js';
+// import './module/dragscroll.js';

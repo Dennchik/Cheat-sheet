@@ -8,12 +8,51 @@ module.exports = {
 	isProd: isProd,
 	isDev: isDev,
 
-
 	webpack: {
 		mode: isProd ? 'production' : 'development',
 		entry: {
-			main: './#src/js/main.js',
-			app: './#src/js/app.js'
+			app: './#src/js/app.js',
+			main: './#src/js/main.js'
+		},
+		module: {
+			rules: [
+				{
+					test: /\.css$/,
+					use: ['style-loader', 'css-loader'],
+				},
+			],
+		},
+	},
+	svgSpr: {
+		shape: {
+			id: {
+				separator: '--',
+				pseudo: '~',
+				whitespace: '_'
+			},
+			dimension: { // Set maximum dimensions
+				maxWidth: 500,
+				maxHeight: 500
+			},
+			spacing: { // Add padding
+				padding: 0
+			},
+			transform: [{
+				svgo: {
+					plugins: [
+						"cleanupAttrs",
+						"convertColors",
+						"removeEmptyAttrs"
+					]
+				}
+			}],
+			// dest: './svg/intermediate-svg' // Keep the intermediate files
+		},
+		mode: {
+			defs: {
+				dest: './svg',
+				sprite: './sprite.svg',
+			},
 		},
 	},
 	pug: {
@@ -41,10 +80,10 @@ module.exports = {
 		grid: 'auto-place',
 		overrideBrowserslist: [
 			'last 3 versions',
-			// 'Android >= 5',
-			// 'Firefox >= 24',
-			// 'Safari >= 6',
-			// 'Opera >= 12',
+			'Android >= 5',
+			'Firefox >= 24',
+			'Safari >= 6',
+			'Opera >= 12',
 		],
 	},
 	imagemin: {
